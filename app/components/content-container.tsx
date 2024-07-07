@@ -61,7 +61,7 @@ export default function ContentContainer() {
                     </svg>
                 </div>
                 <input type="search" id="query" name="query" className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-purple-700 focus:border-purple-700" placeholder="Search using keywords..." defaultValue={input} required />
-                <button type="submit" className="hidden sm:block text-white absolute end-2.5 bottom-2.5 bg-darkpurple hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-purple-700 font-medium rounded-lg text-sm px-4 py-2">Search</button>
+                <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-darkpurple hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-purple-700 font-medium rounded-lg text-sm px-4 py-2">Search</button>
             </div>
           </form>
           <div className="w-full max-w-2xl mx-auto pt-4">
