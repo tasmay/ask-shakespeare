@@ -47,7 +47,7 @@ In this case, we ask the LLM to translate the retrieved recipe instructions into
 
 ## Demo
 
-This project is deployed at [foo](https://bar.vercel.app/). Try it out online!
+This project is deployed at [https://ask-shakespeare.vercel.app/](https://ask-shakespeare.vercel.app/). Try it out online!
 
 https://github.com/tasmay/ask-shakespeare/assets/3182990/2d14c723-97a9-4cf3-9f6f-f6b3ea87e633
 
