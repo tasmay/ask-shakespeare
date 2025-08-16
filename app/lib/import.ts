@@ -9,7 +9,7 @@ async function main() {
         process.env.WEAVIATE_INSTANCE_URL!, {
         authCredentials: new weaviate.ApiKey(process.env.WEAVIATE_API_KEY!),
         headers: {
-            "X-OpenAI-Api-Key": process.env.OPENAI_API_KEY!
+            "X-OpenAI-Api-Key": process.env.OPENAI_APIKEY!
         }
       }
     )

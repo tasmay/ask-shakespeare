@@ -11,10 +11,11 @@ export async function GET(request: NextRequest) {
         {
           authCredentials: new weaviate.ApiKey(process.env.WEAVIATE_API_KEY!),
           headers: {
-            "X-OpenAI-Api-Key": process.env.OPENAI_API_KEY!
+            'X-OpenAI-Api-Key': process.env.OPENAI_APIKEY!
           }
         }
       )
+
       const recipes = client.collections.get('Recipes');
 
       const prompt = `Write the recipe instructions: {instructions} as a Shakespearean poem.`
