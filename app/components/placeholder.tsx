@@ -1,36 +1,30 @@
-export interface PlaceholderProps {
-    handleInput: (inputText: string) => void;
-}
+export default function Placeholder() {
+  return (
+    <div className="w-full bg-parchment-100/60 border border-honey-500/20 rounded-2xl p-6 sm:p-8 text-center shadow-sm">
+      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-honey-500/10 text-2xl mb-3">
+        📖
+      </div>
+      <h3 className="text-xl font-serif font-bold text-plum-950 mb-2">
+        How Dost This Culinary Sorcery Work?
+      </h3>
+      <p className="text-sm text-plum-900/70 font-sans max-w-lg mx-auto leading-relaxed">
+        Search for any craving, ingredient, or delicacy above. Weaviate scans thousands of authentic recipes, and Google Gemini re-imagines the culinary instructions into an authentic Shakespearean verse!
+      </p>
 
-const exampleQueries = [
-    'Chicken and cheese recipes',
-    'Quick mocktails',
-    'Turkey sandwich',
-    'Casserole',
-]
-
-export default function Placeholder({handleInput}: PlaceholderProps) {
-
-    const handleClick = (e: React.MouseEvent<HTMLElement>, inputText: string) => {
-        e.preventDefault()
-        handleInput(inputText)
-    }
-
-    return(
-        <div className="h-96 p-4 bg-transparent text-gray-900">
-          <p className="text-gray-900">{`\"Ask Shakespeare\" uses near text queries to look for recipes matching the search criteria. It then translates the recipe into a beautiful Shakespearean poem!`}</p>
-          <p>Example queries to try:</p>
-          <div className="mx-3 mt-6 flex max-w-3xl flex-wrap items-stretch justify-center gap-4">
-            <div className="flex max-w-3xl flex-wrap items-stretch justify-center gap-4">
-                <div className="grid grid-cols-2 gap-4">
-                {exampleQueries.map((q, i) => (
-                    <button key={`q-${i}`} onClick={(e) => handleClick(e, q.toLowerCase())} className="relative flex w-40 flex-col gap-2 rounded-2xl bg-white border border-slate-300 px-3 pb-4 pt-3 text-xs text-center align-top shadow-lg transition hover:bg-slate-100">
-                        {q}
-                    </button>
-                ))}
-                </div>
-            </div>
-          </div>
+      <div className="mt-6 pt-6 border-t border-honey-500/20 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans text-plum-900/80">
+        <div className="p-3 bg-white/60 rounded-xl border border-honey-500/10">
+          <div className="text-base mb-1">🔍 1. Search</div>
+          <span>Input any dish or click a sample query pill above</span>
         </div>
-    );
+        <div className="p-3 bg-white/60 rounded-xl border border-honey-500/10">
+          <div className="text-base mb-1">⚡ 2. Vector Search</div>
+          <span>Weaviate retrieves the most delectable recipe match</span>
+        </div>
+        <div className="p-3 bg-white/60 rounded-xl border border-honey-500/10">
+          <div className="text-base mb-1">🎭 3. Generative Verse</div>
+          <span>Gemini transforms your recipe into a Shakespearean poem</span>
+        </div>
+      </div>
+    </div>
+  );
 }

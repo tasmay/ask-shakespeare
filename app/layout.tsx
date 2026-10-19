@@ -5,8 +5,8 @@ import "./globals.css";
 const lora = Lora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ask Shakespeare",
-  description: "A collection of Shakespearean recipes",
+  title: "Ask Shakespeare — Culinary Recipes in Verse",
+  description: "Ask Shakespeare for any recipe and discover culinary instructions translated into Shakespearean poems.",
 };
 
 export default function RootLayout({
@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lora.className} bg-beige`}>{children}</body>
+      <body className={`${lora.className} bg-parchment-50 text-plum-950 min-h-screen selection:bg-honey-400 selection:text-plum-950`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -4,16 +4,12 @@ import Header from "./components/header";
 
 export default function Home() {
   return (
-    <div className="">
-      <header className="flex flex-col items-center">
-        <Header></Header>
-      </header>
-      <main className="">
-        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <ContentContainer></ContentContainer>
-        </div>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-6">
+        <ContentContainer />
       </main>
-      {/* <Footer></Footer> */}
+      <Footer />
     </div>
   );
 }
